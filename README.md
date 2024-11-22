@@ -26,4 +26,4 @@ The project consists of the following HTML files:
    ```bash
    git clone <repository-url>
 
-TWO VIEW THIS FILE CLICK https://kaaniyalaiyankovil.github.io/kanniyalaiyankovil/
+TO VIEW THIS WEBSITE CLICK https://kaaniyalaiyankovil.github.io/kanniyalaiyankovil/

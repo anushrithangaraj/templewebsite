@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>காணியாளய்யன் திருக்கோவில்(பைரவர் கூட்டம்) - Home</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom styles */
+    header {
+      background-color: #ffc107;
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+    }
+
+    header img {
+      max-width: 60%;
+      height: auto;
+    }
+
+    .circle-image {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+    }
+
+    .top-left {
+      top: 10px;
+      left: 10px;
+    }
+
+    .top-right {
+      top: 10px;
+      right: 10px;
+    }
+
+    h1 {
+      font-family: Arial, sans-serif;
+      font-size: 2rem;
+      color: #333;
+      margin-top: 30px;
+      word-wrap: break-word; /* Ensure long words break and wrap */
+    }
+
+    @media (min-width: 576px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      .circle-image {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    footer {
+      background-color: #343a40;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    .carousel-item img {
+      max-width: 100%;
+      height: auto;
+    }
+    .head1{
+  font-size: 1.5rem;
+  color: #000; /* Orange Red */
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000;
+}
+    /* Styling for names */
+    .name {
+      font-size: 1rem;
+      color: #000; /* Black */
+      font-weight: bold;
+    }
+    .name-number{
+      font-size: 1rem;
+      color: #d40303; /* Dark Gray */
+      margin-left: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Include the common header -->
+  <header>
+    <div class="container">
+      <div class="head1">
+        காணியாளய்யன் திருக்கோவில்(பைரவர் கூட்டம்)</div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="கோவில் வரலாறு.html">கோவில் வரலாறு</a></li>
+          <li class="nav-item"><a class="nav-link" href="கடவுள் பெயர்கள்.html">கடவுள் பெயர்கள்</a></li>
+          <li class="nav-item"><a class="nav-link" href="புகைப்பட தொகுப்பு.html">புகைப்பட தொகுப்பு</a></li>
+          <li class="nav-item"><a class="nav-link" href="நிர்வாகிகள்.html">நிர்வாகிகள் பெயர்கள்</a></li>
+          <li class="nav-item"><a class="nav-link" href="நிலம் அன்பளிப்பாளர்கள்.html">நிலம் அன்பளிப்பாளர்கள்</a></li>
+          <li class="nav-item"><a class="nav-link" href="அமாவாசை கட்டளைதாரர்கள்.html">அமாவாசை கட்டளைதாரர்கள்</a></li>
+          <li class="nav-item"><a class="nav-link" href="விஷேசநாட்கள்.html">விஷேசநாட்கள்</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dropdown for Tamil months -->
+  <div class="container mt-4">
+    <div class="form-group">
+      <label for="tamilMonth">Select Month:</label>
+      <select id="tamilMonth" class="form-control">
+        <option value="chithirai">சித்திரை</option>
+        <option value="vaikasi">வைகாசி</option>
+        <option value="aani">ஆனி</option>
+        <option value="aadi">ஆடி</option>
+        <option value="aavani">ஆவணி</option>
+        <option value="purattasi">புரட்டாசி</option>
+        <option value="aipasi">ஐப்பசி</option>
+        <option value="karthigai">கார்த்திகை</option>
+        <option value="margazhi">மார்கழி</option>
+        <option value="thai">தை</option>
+        <option value="maasi">மாசி</option>
+        <option value="panguni">பங்குனி</option>
+      </select>
+    </div>
+    <div id="monthContent" class="mt-4">
+      <!-- Content for selected month will be displayed here -->
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 காணியாளய்யன் திருக்கோவில். All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript to handle Tamil month selection -->
+  <script>
+    const monthNames = {
+      chithirai: ['சித்திரை', 'Name 2', 'Name 3', 'சித்திரை', 'Name 2', 'Name 3', 'சித்திரை', 'Name 2', 'Name 3'], // Replace with actual names for சித்திரை
+      vaikasi: ['Name 1', 'Name 2', 'Name 3'], // Replace with actual names for வைகாசி
+      aani: [
+        { number: '1.', name: '  V. தண்டயுதபாணி/சுதா' },
+        { number: '2.', name: 'Dr. கைலாஷ்நாத் /Dr ஜனனி' },
+        { number: '3.', name: 'V. சாண்முகசுந்தம்/மோகனசுந்தரி' },
+        { number: '4.', name: 'S. கோவிந்தராஜ் /சரசு' },
+        { number: '5.', name: 'S. Murugesh/சகுந்தலா' },
+        { number: '6.', name: 'ஜி. S. ஸ்ரீதர் /கார்த்தியாயினி' },
+        { number: '7.', name: 'R. S. வேணுகோபால் /நிர்மலா' },
+        { number: '8.', name: 'செல்லம். பாஸ்கர் /சுகவனேஸ்வரி' },
+        { number: '9.', name: 'V. மோகன் சதிஷ் /ராஜேஸ்வரி' },
+        { number: '10.', name: 'டி.ஜெயராமன் /கல்பனா' },
+        { number: '11.', name: 'டி. Kaliyappan/ பேபி' }
+      ],
+      aadi: ['Name 1', 'Name 2', 'Name 3'], // Replace with actual names for ஆடி
+      aavani: ['Name 1', 'Name 2', 'Name 3'], // Replace with actual names for ஆவணி
+      purattasi: ['Name 1', 'Name 2', 'Name 3'], // Replace with actual names for புரட்டாசி
+      aipasi: ['Name 1', 'Name 2', 'Name 3'], // Replace with actual names for ஐப்பசி
+      karthigai: ['Name 1', 'Name 2', 'Name 3'], // Replace with actual names for கார்த்திகை
+      margazhi: ['Name 1', 'Name 2', 'Name 3'], // Replace with actual names for மார்கழி
+      thai: ['Name 1', 'Name 2', 'Name 3'], // Replace with actual names for தை
+      maasi: ['Name 1', 'Name 2', 'Name 3'], // Replace with actual names for மாசி
+      panguni: ['Name 1', 'Name 2', 'Name 3'] // Replace with actual names for பங்குனி
+    };
+
+    document.getElementById('tamilMonth').addEventListener('change', function () {
+      const selectedMonth = this.value;
+      const monthContent = document.getElementById('monthContent');
+      monthContent.innerHTML = '';
+
+      const list = document.createElement('ul');
+      list.className = 'list-group';
+
+      monthNames[selectedMonth].forEach(function (entry) {
+        const listItem = document.createElement('li');
+        listItem.className = 'list-group-item';
+
+        const numberSpan = document.createElement('span');
+        numberSpan.className = 'name-number';
+        numberSpan.textContent = entry.number;
+
+        const nameSpan = document.createElement('span');
+        nameSpan.className = 'name';
+        nameSpan.textContent = entry.name;
+
+        listItem.appendChild(numberSpan);
+        listItem.appendChild(nameSpan);
+        list.appendChild(listItem);
+      });
+
+      monthContent.appendChild(list);
+    });
+
+    // Trigger change event on page load to display initial month content
+    document.getElementById('tamilMonth').dispatchEvent(new Event('change'));
+  </script>
+</body>
+</html>
